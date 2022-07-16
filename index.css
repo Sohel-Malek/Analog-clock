@@ -1,0 +1,44 @@
+#clockContainer{
+    position: relative;
+    margin: auto;
+    height: 30vw;
+    width: 40vw;
+    background-image: url("https://www.pinclipart.com/picdir/middle/12-126849_clock-face-clip-art-blank-analog-clock-clipart.png");
+    background-repeat: no-repeat; 
+    background-size: 100%;
+}
+
+#hour, #minute, #second{
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+
+}
+
+#hour{
+    width: 1.3%;
+    height: 17%;
+    top:34.5%;
+    left:49.4%;
+    opacity: 0.8;
+
+}
+
+#minute{
+    width: 1%;
+    height: 21%;
+    top:30.5%;
+    left:49.4%;
+    opacity: 0.8;
+   
+}
+
+#second{
+    width: 1%;
+    height: 29%;
+    top:22.5%;
+    left:49.5%;
+    opacity: 0.8;
+
+}
