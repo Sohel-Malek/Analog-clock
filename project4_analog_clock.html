@@ -6,10 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clock Using Pure Js</title>
-    <link rel="stylesheet" href="/index.css">
-    <script src="/index.js"></script>
-    
+<!--     <link rel="stylesheet" href="index.css"> -->
+<!--     <script src="index.js"></script>
+     -->
 </head>
+<style>
+    #clockContainer{
+        position: relative;
+        margin: auto;
+        height: 30vw;
+        width: 40vw;
+        background-image: url("https://www.pinclipart.com/picdir/middle/12-126849_clock-face-clip-art-blank-analog-clock-clipart.png");
+        background-repeat: no-repeat; 
+        background-size: 100%;
+    }
+
+    #hour, #minute, #second{
+        position: absolute;
+        background: black;
+        border-radius: 10px;
+        transform-origin: bottom;
+
+    }
+
+    #hour{
+        width: 1.3%;
+        height: 17%;
+        top:34.5%;
+        left:49.4%;
+        opacity: 0.8;
+
+    }
+
+    #minute{
+        width: 1%;
+        height: 21%;
+        top:30.5%;
+        left:49.4%;
+        opacity: 0.8;
+
+    }
+
+    #second{
+        width: 1%;
+        height: 29%;
+        top:22.5%;
+        left:49.5%;
+        opacity: 0.8;
+
+    }
+</style>
 <body>
     <div id="clockContainer">
         <div id="hour"></div>
@@ -17,6 +63,23 @@
         <div id="second"></div>
 
     </div>
+    <script>
+        setInterval(() => {
+        d = new Date();
+        htime = d.getHours();
+        mtime = d.getMinutes();
+        stime = d.getSeconds();
+        hrotation = 30*htime + mtime/2;
+        mrotation = 6*mtime;
+        srotation = 6*stime; 
+
+
+        hour.style.transform = `rotate(${hrotation}deg)`;
+        minute.style.transform = `rotate(${mrotation}deg)`;
+        second.style.transform = `rotate(${srotation}deg)`;
+
+    },1000);
+    </script>
 
 </body>
 </html>
